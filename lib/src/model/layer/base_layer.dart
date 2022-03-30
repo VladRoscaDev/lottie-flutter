@@ -62,7 +62,7 @@ abstract class BaseLayer implements DrawingContent, KeyPathElement {
   final Paint _mattePaint = ui.Paint();
   final Paint _clearPaint = ui.Paint()
     ..isAntiAlias = false
-    ..blendMode = ui.BlendMode.clear;
+    ..blendMode = ui.BlendMode.src..blendMode=ui.BlendMode.dst;
   final String _drawTraceName;
   final Matrix4 boundsMatrix = Matrix4.identity();
   final LottieDrawable lottieDrawable;
